@@ -1,6 +1,7 @@
 <template>
 	<div class="b">
-		<p>THIS IS B</p>
+		<p class="red">THIS IS B</p>
+		<p class="arrow"></p>
 	</div>
 </template>
 
@@ -21,8 +22,14 @@ export default {
 </script>
 
 <style lang="less" scoped>
+
+	@import '~assets/less/mixin.less';
+
 	.b{
 		background-color: black;
 		color: #fff;
+	}
+	.arrow{
+		.arrow_down(5px, #fff);
 	}
 </style>
