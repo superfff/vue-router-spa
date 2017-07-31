@@ -1,0 +1,13 @@
+// 三角形(向下)
+.arrow_down(@size, @color: black){
+	// display: inline-block;
+	margin-left: 5px;
+	&:after{
+		content: '';
+		display: inline-block;
+		border-top: @size solid @color;
+		border-left: @size solid transparent;
+		border-right: @size solid transparent;
+		border-bottom: @size solid transparent;
+	}
+}
