@@ -14,6 +14,15 @@ export default {
 
 		}
 	},
+	components: {
+
+	},
+	props: {
+
+	},
+	watch: {
+		
+	},
 	created(){
 
 	},
@@ -24,5 +33,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
+	//引入mixin方法
+	@import '~assets/less/mixin.less';
+
+
 
 </style>
