@@ -5,6 +5,9 @@ import router from './router'
 //项目配置项
 import 'assets/js/conf';
 
+/*引入全局样式*/
+import 'assets/less/reset.css';
+import 'assets/less/common.less';
 
 
 //设置为 false 以阻止 vue 在启动时生成生产提示。

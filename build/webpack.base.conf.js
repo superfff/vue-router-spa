@@ -2,9 +2,8 @@ var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
 var webpack = require('webpack')
+const vueLoaderConfig = require('./vue-loader.conf')
 
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
-const extract = new ExtractTextPlugin('css/[name].[hash].css');
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -22,12 +21,8 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   plugins: [
-    extract,
-
-    new webpack.ProvidePlugin({
-      // axios: 'axios'
-      
-    })
+    
+    
   ],
   resolve: {
     extensions: ['.js', '.vue', '.json'],
@@ -45,18 +40,7 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        options: {
-          loaders: {
-            css: ExtractTextPlugin.extract({
-              use: 'css-loader',
-              fallback: 'vue-style-loader'
-            }),
-            less: ExtractTextPlugin.extract({
-              use: 'css-loader!less-loader',
-              fallback: 'vue-style-loader'
-            })
-          }
-        }
+        options: vueLoaderConfig
       },
 
 
